@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #8b7bef
+}
+body {
+    background-color: black;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+button{
+    border: none;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+main {
+    padding-top: 50px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+}
+.header__nav {
+     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    height: 50px;  
+    background-color: gray;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header__list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    top: 50px;
+    right: -100%;
+    transition: right .5s linear;
+}
+.header__list.active {
+    right: 0;
+    transition: right .5s linear;
+}
+.header__list > * {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid;
+}
+.header__btn {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.section1 {
+    padding: 50px 0;
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+
+.social {
+    height: 35px;
+    display: flex;
+    gap: 25px;
+}
+.social img {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 5px;
+}
+.photo img:last-child{
+    display: none
+}
+.btn{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    width: 210px;
+}
+
+.btn::before {
+    content: " ";
+    background-image: url(../Íconos/letter.png)no-repeat;
+    background-size: contain;
+    width: 15px;
+    aspect-ratio: 1;
+    display: block;
+}
+
+
+@media (min-width: 900px) {
+    .header__list {
+        flex-direction: row;
+        gap: 15px;
+        position: static;
+    }
+    .header__list > * {
+        padding: 7.5px 15px;
+        border-radius: 20px;
+    }
+    .header__btn {
+        display: none;
+    }
+}
