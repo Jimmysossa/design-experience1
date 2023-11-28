@@ -26,16 +26,15 @@ body {
 }
 
 /* Define las propiedades de los títulos y subtítulos */
-.title, .subtitle, .subtitle2 {
+.title {
     margin-left: 15px;
 }
 .subtitle {
     font-size: 32px;
-    margin-left: 40px;
+    text-align: center;
 }
 .subtitle2 {
     font-size: 20px;
-    margin-left: 0px;
     text-align: left;
 }
 
@@ -124,11 +123,6 @@ h1 {
     background-color: var(--quintinary-color);
 }
 
-/* Define las propiedades de la sección superior */
-.top {
-    text-align: center;
-}
-
 /* Define las propiedades de la primera sección */
 .section1 {
     padding: 50px 0;
@@ -204,6 +198,34 @@ h1 {
     justify-content: space-between;
     background-color: #fcda68;
 }
+#h1 {
+    width: 160px;
+}
+.subtitle2 {
+    grid-column: 1;
+    grid-row: 1;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+#h2 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 0 auto;
+    width: 400px;
+    height: 120px;
+}
+#r1, #r2, #t1, #t2 {
+    border-bottom: 2px solid var(--tertiary-color);
+}
+.jun {
+    width: 150px;
+}
+.rc {
+    margin-top: 15px;
+}
+
 
 /* Define las propiedades de las habilidades */
 .skills {
@@ -230,14 +252,30 @@ h1 {
     justify-items: center;
 }
 
+.section3 {
+    height: auto;
+}
+.port{
+    padding: 15px;
+}
+
 /* Define las propiedades de la demostración */
 .demo {
-    display: flex;
+    display: grid;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 15px;
+}
+
+.text {
+    padding: 15px;
+    text-align: start;
+    font-size: 20px;
+}
+.bye {
     text-align: center;
-    padding: 5px;
+    padding: 50px;
 }
 
 /* Define las propiedades de los medios de comunicación para pantallas de más de 850px de ancho */
@@ -321,27 +359,7 @@ h1 {
         height: auto;
         width: 100%;
     }
-    .subtitle2 {
-        grid-column: 1;
-        grid-row: 1;
-        align-items: flex-start;
-        padding: 20px;
-    }
-
-    #h2 {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3, 1fr);
-        margin: 0 auto;
-        margin-bottom: 2px;
-        width: 400px;
-        height: 120px;
-    }
-    #r1 {
-        grid-column: 1;
-        grid-row: 1;
-        align-items: flex-end;
-    }
+   
     /* Define las propiedades de las habilidades en pantallas de más de 850px de ancho */
     .skills {
         margin: 0 auto;
@@ -358,9 +376,7 @@ h1 {
     .rc {
         grid-column: span 2;
     }
-    #h1 {
-        width: 120px;
-    }
+   
 
     /* Define las propiedades de la experiencia en pantallas de más de 850px de ancho */
     .experience {
