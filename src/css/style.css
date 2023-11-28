@@ -321,17 +321,45 @@ h1 {
         height: auto;
         width: 100%;
     }
+    .subtitle2 {
+        grid-column: 1;
+        grid-row: 1;
+        align-items: flex-start;
+        padding: 20px;
+    }
 
+    #h2 {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin: 0 auto;
+        margin-bottom: 2px;
+        width: 400px;
+        height: 120px;
+    }
+    #r1 {
+        grid-column: 1;
+        grid-row: 1;
+        align-items: flex-end;
+    }
     /* Define las propiedades de las habilidades en pantallas de más de 850px de ancho */
     .skills {
+        margin: 0 auto;
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         text-align: center;
         padding: 5px;
-        grid-column: 1 / span 2;
-        grid-row: 2;
+    }
+    .mobile-design {
+        padding: 20px;
+    }
+    .rc {
+        grid-column: span 2;
+    }
+    #h1 {
+        width: 120px;
     }
 
     /* Define las propiedades de la experiencia en pantallas de más de 850px de ancho */
