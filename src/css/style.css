@@ -100,7 +100,7 @@ h1 {
 .header__list {
     position: absolute;
     top: 50px;
-    right: -40%;
+    right: -60%;
     transition: right .5s;
 }
 .header__list.active {
